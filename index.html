@@ -10,35 +10,64 @@
         background-color: #f1f5f2; /* Very light sage tint */
       }
     </style>  
-    </script>
   </head>
 
   <body>
-    <h1 id="title">Retreat Experience Feedback Survey</h1>
+    <div class="max-w-xl mx-auto my-10 bg-white p-8 rounded-lg shadow-md">
+    <h1 id="title" class="text-3xl font-bold text-gray-800 mb-4">Retreat Experience Feedback Survey</h1>
     <p id="description">Thank you for participating in our annual retreat! Please fill out this form so we can continue providing mental health practitioners with the most fulfilling retreat experiences possible!</p>
-    <form>
-      <label for="name-label">Full Name</label>  
-      <input id="name-label"
+    <form id="survey-form" class="space-y-6">
+
+      <div class="flex flex-col">
+      <label for="name">Full Name</label>  
+      <input id="name"
       type="text" 
       placeholder="Full Name" 
-      required 
-      />
+            class="border border-gray-300 
+      rounded-lg 
+      p-3 
+      focus:ring-2 
+      focus:ring-emerald-500 
+      focus:outline-none 
+      transition 
+      uppercase"
+      required>
+      </div>
 
-      <label for="email-label">E-mail Address</label>
-      <input id="email-label" 
+      <div class="flex flex-col">
+      <label for="email">E-mail Address</label>
+      <input id="email" 
       type="email"
       placeholder="example@email.com"
-      required 
-      />
-
-      <label for="number-label">Lic. &#35</label>
+      class="border border-gray-300 
+      rounded-lg 
+      p-3 
+      focus:ring-2 
+      focus:ring-emerald-500 
+      focus:outline-none 
+      transition 
+      uppercase"
+      required>
+      </div>
+<div class="flex gap-4">
+      <div class="flex flex-col flex-1">
+      <label for="number">Lic. #</label>
       <input id="number"
       type="text" 
-      placeholder="000000"
-      min-length="6"
-      max-length="6"
-      />
+      placeholder="e.g. ABC123"
+      minlength="4"
+      maxlength="12"
+      class="border border-gray-300 
+      rounded-lg 
+      p-3 
+      focus:ring-2 
+      focus:ring-emerald-500 
+      focus:outline-none 
+      transition 
+      uppercase">
+      </div>
 
+      <div class="flex flex-col w-32">
       <select id="dropdown" required>
         <option value="" disabled selected>State</option>
 <option value="AK">AK</option>
@@ -92,7 +121,8 @@
 <option value="WV">WV</option>
 <option value="WY">WY</option>
 </select>  
-
+</div>
+</div>
 <p>Would you recommend this retreat to a colleague?</p>
 <label>
 <input type="radio" name="recommend" value="definitely" checked> Definitely
@@ -124,6 +154,7 @@
   </textarea>
 
 <button type="submit" id="submit">Submit</button>
-      </form>  
+      </form>
+    </div>    
   </body>
 </html>
